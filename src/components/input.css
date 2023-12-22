@@ -1,0 +1,43 @@
+#main_container{
+    width: 40%;
+    min-width: 500px;
+    margin: auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 128, 0, 0.274);
+}
+#main_heading{
+    margin-bottom: -10px;
+    font-size: 1.8rem;
+    font-weight:800;
+}
+input,button{
+    padding: 10px 10px;
+    font-size: 16px;
+    width: 400px;
+}
+.countrySelBox{
+    width: 100%;
+}
+.countrySelBox select{
+    width: 30%;
+    font-size: 16px;
+    padding: 5px 0;
+    margin: 0 5px;
+}
+button{
+    width: 200px;
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:disabled{
+    background-color: rgba(0, 128, 0, 0.519);
+}
