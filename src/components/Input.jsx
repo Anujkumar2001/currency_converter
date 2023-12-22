@@ -17,11 +17,15 @@ function Input() {
   }, [data]);
   const handleInputCurrency = (e) => {
     setInputCurrency(e.target.value);
+    setIsClick(false)
   };
   const handleConvert = () => {
     console.log(data[selectCountry][selectedCountry]);
     setInputCurrency(inputCurrency * data[selectCountry][selectedCountry]);
     setIsClick(true);
+  };
+  const handleReset = () => {
+    setInputCurrency(1);
   };
   return (
     <div style={{ marginTop: "50px" }} id="main_container">
@@ -72,9 +76,14 @@ function Input() {
           })}
         </select>
       </div>
-      <button onClick={handleConvert} disabled={isClick}>
-        Convert
-      </button>
+      <div className="btnSection">
+        <button onClick={handleConvert} disabled={isClick} id="converterBtn">
+          Convert
+        </button>
+        <button onClick={handleReset} id="resetBtn">
+          Reset
+        </button>
+      </div>
     </div>
   );
 }
